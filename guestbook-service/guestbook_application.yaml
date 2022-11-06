@@ -8,9 +8,9 @@ spec:
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: my-demo-app
+    path: helm-guestbook
     helm:
-      releaseName: my-app
+      releaseName: helm-guestbook
       valueFiles:
         - values.yaml
   destination:
