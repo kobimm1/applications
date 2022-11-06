@@ -3,8 +3,6 @@ kind: Application
 metadata:
   name: guest
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/manifest-generate-paths: /guestbook-service/guest
 spec:
   project: dev
   source:
