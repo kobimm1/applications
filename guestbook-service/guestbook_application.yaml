@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: helm-guestbook
+    path: my-demo-app
     helm:
       releaseName: guestBook
       valueFiles:
