@@ -4,7 +4,7 @@ metadata:
   name: guest
   namespace: argocd
 spec:
-  project: guest-project
+  project: guestbook-project
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
