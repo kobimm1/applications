@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: helm-guestbook
+    path: aaa
     helm:
       releaseName: guestBook
       valueFiles:
