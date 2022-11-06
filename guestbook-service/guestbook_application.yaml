@@ -6,15 +6,15 @@ metadata:
   annotations:
     argocd.argoproj.io/manifest-generate-paths: /guestbook-service/guest
 spec:
-  project: guest-project
+  project: dev
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: my-demo-app
-  helm:
-    releaseName: guestBook
-    valueFiles:
-      - values.yaml
+    path: helm-guestbook
+    helm:
+      releaseName: guestBook
+      valueFiles:
+        - values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: guestBooks
