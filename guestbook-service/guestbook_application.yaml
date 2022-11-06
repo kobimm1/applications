@@ -11,10 +11,10 @@ spec:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
     path: my-demo-app
-    helm:
-      releaseName: guestBook
-      valueFiles:
-        - values.yaml
+  helm:
+    releaseName: guestBook
+    valueFiles:
+      - values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: guestBooks
