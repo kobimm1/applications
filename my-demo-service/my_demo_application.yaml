@@ -3,6 +3,9 @@ kind: Application
 metadata:
   name: my-demo-app
   namespace: argocd
+  annotations:
+    # resolves to the 'guestbook' directory
+    argocd.argoproj.io/manifest-generate-paths: .
 spec:
   project: default
   source:
