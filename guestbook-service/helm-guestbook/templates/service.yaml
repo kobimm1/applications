@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "guest.fullname" . }}
+  name: {{ template "helm-guestbook.fullname" . }}
   labels:
-    app: {{ template "guest.name" . }}
-    chart: {{ template "guest.chart" . }}
+    app: {{ template "helm-guestbook.name" . }}
+    chart: {{ template "helm-guestbook.chart" . }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 spec:
@@ -15,5 +15,5 @@ spec:
       protocol: TCP
       name: http
   selector:
-    app: {{ template "guest.name" . }}
+    app: {{ template "helm-guestbook.name" . }}
     release: {{ .Release.Name }}

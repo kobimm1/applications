@@ -3,19 +3,21 @@ kind: Application
 metadata:
   name: guest
   namespace: argocd
+  annotations:
+    argocd.argoproj.io/manifest-generate-paths: /guestbook-service/guest
 spec:
-  project: guestbook-project
+  project: guest-project
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: guest
+    path: helm-guestbook
     helm:
-      releaseName: guest
+      releaseName: guestBook
       valueFiles:
         - values.yaml
   destination:
     server: "https://kubernetes.default.svc"
-    namespace: guestbook
+    namespace: guestBooks
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
