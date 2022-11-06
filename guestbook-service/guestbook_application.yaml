@@ -1,16 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: guestbook-app
+  name: guestbook
   namespace: argocd
 spec:
   project: guestbook-project
   source:
     repoURL: https://github.com/kobimm1/demo-argo.git
     targetRevision: HEAD
-    path: guestbook-app
+    path: guestbook
     helm:
-      releaseName: guestbook-app
+      releaseName: guestbook
       valueFiles:
         - values.yaml
   destination:
