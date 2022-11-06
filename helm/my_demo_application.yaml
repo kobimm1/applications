@@ -8,11 +8,11 @@ spec:
   source:
     repoURL: https://github.com/kobimm1/applications.git
     targetRevision: HEAD
-    path: helm/my-demo-app
+    path: my-demo-app
     helm:
       releaseName: my_demo_application
       valueFiles:
-        - helm/my-demo-app/values.yaml
+        - values.yaml
   destination:
     server: "https://kubernetes.default.svc"
     namespace: env0001
